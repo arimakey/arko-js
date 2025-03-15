@@ -1,0 +1,54 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  registry-url: 'https://registry.npmjs.org/'
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Run Linting
+              run: pnpm eslint . --fix
+
+            - name: Run Prettier
+              run: pnpm prettier --write .
+
+            - name: Run Tests
+              run: pnpm test
+
+            - name: Determine new version
+              id: version
+              run: |
+                  NEW_VERSION=$(pnpm version patch --no-git-tag-version)
+                  echo "new_version=$NEW_VERSION" >> $GITHUB_ENV
+
+            - name: Commit new version
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git add package.json
+                  git commit -m "chore(release): bump version to ${{ env.new_version }}"
+                  git tag -a "v${{ env.new_version }}" -m "Release ${{ env.new_version }}"
+                  git push origin main --tags
+
+            - name: Publish to npm
+              run: pnpm publish --access public
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

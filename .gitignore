@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+pnpm-lock.yaml
+
+# Build output
+dist/
+storybook-static/
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# GitHub workflows cache
+.github/workflows/*.log
+
+# Environment variables
+.env
+.env.local
+.npmrc
