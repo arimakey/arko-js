@@ -1,0 +1,78 @@
+{
+    "name": "arko-js",
+    "version": "0.0.1",
+    "main": "/dist/arko-js.umd.cjs",
+    "module": "./dist/arko-js.mjs",
+    "exports": {
+        ".": {
+            "import": "./dist/arko-js.mjs",
+            "require": "./dist/arko-js.umd.cjs"
+        }
+    },
+    "scripts": {
+        "build": "vite build",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build",
+        "version": "changeset version && git add .changeset && git commit -m 'chore: update versions'",
+        "release": "changeset publish",
+        "lint": "eslint . --fix",
+        "format": "prettier --write .",
+        "precommit": "lint-staged"
+    },
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "author": "arima_key",
+    "license": "MIT",
+    "keywords": [
+        "react",
+        "componentes",
+        "ui",
+        "librería"
+    ],
+    "description": "",
+    "devDependencies": {
+        "@changesets/cli": "^2.28.1",
+        "@chromatic-com/storybook": "3",
+        "@commitlint/cli": "^19.8.0",
+        "@commitlint/config-conventional": "^19.8.0",
+        "@eslint/js": "^9.22.0",
+        "@storybook/addon-essentials": "8.6.6",
+        "@storybook/addon-onboarding": "8.6.6",
+        "@storybook/blocks": "8.6.6",
+        "@storybook/experimental-addon-test": "8.6.6",
+        "@storybook/react": "8.6.6",
+        "@storybook/react-vite": "8.6.6",
+        "@storybook/test": "8.6.6",
+        "@vitest/browser": "^3.0.8",
+        "@vitest/coverage-v8": "^3.0.8",
+        "eslint": "^9.22.0",
+        "eslint-config-prettier": "^10.1.1",
+        "eslint-plugin-prettier": "^5.2.3",
+        "eslint-plugin-react": "^7.37.4",
+        "globals": "^16.0.0",
+        "lint-staged": "^15.5.0",
+        "playwright": "^1.51.0",
+        "prettier": "^3.5.3",
+        "prop-types": "15.8.1",
+        "storybook": "8.6.6",
+        "vite": "^6.2.2",
+        "vitest": "^3.0.8"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "lint-staged": {
+        "**/*.{js,jsx}": [
+            "prettier --write",
+            "eslint --fix"
+        ],
+        "**/*.{css,scss}": [
+            "prettier --write"
+        ],
+        "**/*.{js,jsx,css,scss}": [
+            "git add"
+        ]
+    }
+}
