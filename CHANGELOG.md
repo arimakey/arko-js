@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/arimakey/arko-js/compare/v1.2.0...v1.3.0) (2025-03-16)
+
+
+### Features
+
+* add stylesheet export and include in package files ([18921fa](https://github.com/arimakey/arko-js/commit/18921fa048ec1fed716b19917f3beeed2df6b195))
+
 # [1.2.0](https://github.com/arimakey/arko-js/compare/v1.1.3...v1.2.0) (2025-03-16)
 
 
