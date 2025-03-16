@@ -1,3 +1,4 @@
+# .github/workflows/release.yml
 name: Release
 
 on:
@@ -21,6 +22,9 @@ jobs:
                   node-version: 18
                   registry-url: 'https://registry.npmjs.org/'
 
+            - name: Install pnpm
+              run: npm install -g pnpm
+
             - name: Install dependencies
               run: pnpm install
 
@@ -33,22 +37,10 @@ jobs:
             - name: Run Tests
               run: pnpm test
 
-            - name: Determine new version
-              id: version
-              run: |
-                  NEW_VERSION=$(pnpm version patch --no-git-tag-version)
-                  echo "new_version=$NEW_VERSION" >> $GITHUB_ENV
-
-            - name: Commit new version
-              run: |
-                  git config --global user.name "github-actions[bot]"
-                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git add package.json
-                  git commit -m "chore(release): bump version to ${{ env.new_version }}"
-                  git tag -a "v${{ env.new_version }}" -m "Release ${{ env.new_version }}"
-                  git push origin main --tags
-
-            - name: Publish to npm
-              run: pnpm publish --access public
+            - name: Publish with Changesets
+              uses: changesets/action@v1
+              with:
+                  publish: 'true'
               env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
