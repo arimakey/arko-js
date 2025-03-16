@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/arimakey/arko-js/compare/v1.1.2...v1.1.3) (2025-03-16)
+
+
+### Bug Fixes
+
+* update package.json to use peerDependencies and enhance Vite config for library build formats ([efc24a6](https://github.com/arimakey/arko-js/commit/efc24a622327c44aebee14e4c7c89ea67d831363))
+
 ## [1.1.2](https://github.com/arimakey/arko-js/compare/v1.1.1...v1.1.2) (2025-03-16)
 
 
