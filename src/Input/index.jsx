@@ -1,0 +1,1 @@
+const inputText = 'Hello World';
