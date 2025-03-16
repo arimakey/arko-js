@@ -1,12 +1,12 @@
 {
     "name": "arko-js",
     "version": "1.1.0",
-    "main": "dist/arko-js.umd.cjs",
+    "main": "dist/arko-js.umd.js",
     "module": "./dist/arko-js.mjs",
     "exports": {
         ".": {
             "import": "./dist/arko-js.mjs",
-            "require": "./dist/arko-js.umd.cjs"
+            "require": "./dist/arko-js.umd.js"
         }
     },
     "scripts": {
