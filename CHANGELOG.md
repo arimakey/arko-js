@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/arimakey/arko-js/compare/v1.1.1...v1.1.2) (2025-03-16)
+
+
+### Bug Fixes
+
+* update module and main entry points for consistency ([0d313fc](https://github.com/arimakey/arko-js/commit/0d313fc2a0ff43dfa0bf4d46588c2552b45514a3))
+
 ## [1.1.1](https://github.com/arimakey/arko-js/compare/v1.1.0...v1.1.1) (2025-03-16)
 
 
