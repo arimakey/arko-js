@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/arimakey/arko-js/compare/v1.1.3...v1.2.0) (2025-03-16)
+
+
+### Features
+
+* add initial inputText variable with default value ([64a665f](https://github.com/arimakey/arko-js/commit/64a665fe41970b311aefa2f1a425f46fefe708a6))
+
 ## [1.1.3](https://github.com/arimakey/arko-js/compare/v1.1.2...v1.1.3) (2025-03-16)
 
 
