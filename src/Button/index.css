@@ -1,27 +1,28 @@
-.button {
-  transition: background 0.2s ease, padding 0.2s ease;
-  background-color: #6495ed;
-  border-radius: 4px;
-  cursor: pointer;
-  color: #fff;
-  border: none;
+@import '../variables.css';
+@import '../fonts.css';
+
+@import './styles/button-base.css';
+
+@import './styles/button-primary.css';
+@import './styles/button-secondary.css';
+@import './styles/button-transparent.css';
+@import './styles/button-outlined.css';
+@import './styles/button-danger.css';
+@import './styles/button-invisible.css';
+@import './styles/button-disabled.css';
+
+
+.button-small {
+    padding: var(--padding-small);
+    font-size: 12px;
 }
 
-.button:hover {
-  background-color: #3674e7;
+.button-medium {
+    padding: var(--padding-medium);
+    font-size: 14px;
 }
 
-.button:disabled,
-.button:hover:disabled {
-  background-color: #f6f6f6;
-  color: silver;
-  cursor: not-allowed;
-}
-
-.button--small {
-  padding: 8px 16px;
-}
-
-.button--large {
-  padding: 16px 32px;
+.button-large {
+    padding: var(--padding-large);
+    font-size: 16px;
 }

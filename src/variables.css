@@ -1,0 +1,21 @@
+:root {
+    --font-family: 'Oxanium', sans-serif;
+
+    --color-primary: #211f20;
+    --color-secondary: #6c757d;
+    --color-danger: #E82020;
+    --color-border: #211f20;
+
+    --color-text-dark: #211f20;
+    --color-text-light: #fcfbff;
+
+    --padding-small: 12px 12px;
+    --padding-medium: 16px 20px;
+    --padding-large: 20px 32px;
+
+    --border-radius: 8px;
+
+    --weight-light: 200;
+    --weight-normal: 400;
+    --weight-bold: 700;
+}

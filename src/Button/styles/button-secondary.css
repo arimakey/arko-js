@@ -1,0 +1,4 @@
+.button-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-light);
+}
