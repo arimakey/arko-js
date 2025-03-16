@@ -1,0 +1,4 @@
+.button-transparent {
+    background-color: transparent;
+    color: var(--color-border);
+}
