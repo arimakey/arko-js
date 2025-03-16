@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 export default defineConfig({
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.js"),
+      entry: resolve(new URL("src/index.js", import.meta.url).pathname),
       name: "arko-js",
       fileName: "arko-js",
     },
