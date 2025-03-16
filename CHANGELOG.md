@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/arimakey/arko-js/compare/v1.0.0...v1.1.0) (2025-03-16)
+
+
+### Features
+
+* add npm authentication validation step in release workflow ([0bb0823](https://github.com/arimakey/arko-js/commit/0bb0823b13fff3b909ac383f109a1cc3ff0f4dfc))
+* add npm plugin to semantic release configuration for automated publishing ([c78cb9c](https://github.com/arimakey/arko-js/commit/c78cb9c9739d5d624b87398e0c1487f17db4a28b))
+* add step to redact NPM token in release workflow ([dcb452f](https://github.com/arimakey/arko-js/commit/dcb452f21ca4e5e84672953c5a218f5877fe02a5))
+* configure npm for publishing in release workflow ([cbc9a70](https://github.com/arimakey/arko-js/commit/cbc9a70985999cf771611cd18f5a8ce58d165231))
+
 # 1.0.0 (2025-03-16)
 
 
