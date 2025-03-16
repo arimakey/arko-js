@@ -6,7 +6,8 @@
     "exports": {
         ".": {
             "import": "./dist/arko-js.js",
-            "require": "./dist/arko-js.umd.cjs"
+            "require": "./dist/arko-js.umd.cjs",
+            "stylesheet": "./dist/arko-js.css"
         }
     },
     "scripts": {
@@ -20,7 +21,8 @@
     },
     "type": "module",
     "files": [
-        "dist"
+        "dist",
+        "dist/arko-js.css"
     ],
     "author": "arima_key",
     "license": "MIT",
